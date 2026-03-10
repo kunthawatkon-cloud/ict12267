@@ -1,0 +1,73 @@
+/* ลบ margin ขอบขาว */
+body {
+    margin: 0;
+}
+
+  /* การตกแต่งปุ่ม Play และ Stop */
+        .video-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .video-controls button {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .video-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .video-controls i {
+            margin-right: 5px;
+            font-size: 18px;
+        }
+
+        
+/* จัดฟอร์มให้อยู่กลางจอ */
+.form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* ทำให้ card โปร่งใสเล็กน้อย */
+.form-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+}
+
+/* ปรับสี Drop-down */
+.form-select {
+    background-color: #0d6efd;   /* สีพื้นหลัง */
+    color: white;               /* สีตัวอักษร */
+    border: none;
+    font-weight: 500;
+}
+
+/* สีตอนคลิก */
+.form-select:focus {
+    background-color: #0b5ed7;
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+/* เปลี่ยนสี option ตอนเปิด (บาง browser อาจไม่รองรับทั้งหมด) */
+.form-select option {
+    color: black;
+    background-color: white;
+}
