@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Website - 68092306</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    .navbar {
+      background: rgba(20, 20, 28, 0.95) !important;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #fff !important;
+    }
+
+    .navbar-brand span {
+      color: #ff4d6d;
+    }
+
+    .hero {
+      min-height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .section-title {
+      font-weight: 700;
+      color: #1d3557;
+      margin-bottom: 1.5rem;
+    }
+
+    .movie-card {
+      border: none;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .movie-card img {
+      height: 360px;
+      object-fit: cover;
+    }
+
+    .about-box,
+    .contact-box {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .btn-custom {
+      background: #e63946;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background: #c92f3b;
+      color: #fff;
+    }
+
+    footer {
+      background: #111827;
+      color: #fff;
+    }
+
+    .social-icons a {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #e63946;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 70vh;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="https://sitspu.com/img/Logo%20SPU%20SIT_Color.png" alt="SPU Logo" style="height:70px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#movies" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ภาพยนตร์
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#movies">Jurassic World</a></li>
+              <li><a class="dropdown-item" href="#movies">Iron Man 3</a></li>
+              <li><a class="dropdown-item" href="#movies">Green Book</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">เกี่ยวกับเรา</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">ติดต่อเรา</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>สัมผัสโลกของภาพยนตร์สุดมันส์</h1>
+        <p class="mt-3 mb-4">
+          รวมภาพยนตร์น่าติดตาม ทั้งแอ็กชัน ดราม่า และไซไฟ พร้อมรายละเอียดเรื่องย่อ นักแสดง และผู้กำกับในเว็บเดียว
+        </p>
+        <a href="#movies" class="btn btn-custom btn-lg px-4">ดูภาพยนตร์</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5" id="movies">
+    <div class="container">
+      <h2 class="section-title text-center">ภาพยนตร์แนะนำ</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card movie-card">
+            <img src="https://m.media-amazon.com/images/I/61lU2MtuljL._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="Jurassic World">
+            <div class="card-body">
+              <h5 class="card-title">Jurassic World</h5>
+              <p class="card-text text-muted">สวนสนุกไดโนเสาร์สุดล้ำที่กลายเป็นฝันร้าย เมื่อสิ่งมีชีวิตอันตรายหลุดการควบคุม</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#movie1Modal">ดูรายละเอียด</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card movie-card">
+            <img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/f8d9c4e3-406d-413d-aab9-427500dd3a37/compose?aspectRatio=1.78&format=webp&width=1200" class="card-img-top" alt="Iron Man 3">
+            <div class="card-body">
+              <h5 class="card-title">Iron Man 3</h5>
+              <p class="card-text text-muted">เรื่องราวของโทนี่ สตาร์ค ที่ต้องเผชิญหน้ากับวายร้ายแมนดาริน และพิสูจน์ตัวเองโดยไม่พึ่งพาชุดเกราะ</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#movie2Modal">ดูรายละเอียด</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card movie-card">
+            <img src="https://i.ytimg.com/vi/QkZxoko_HC0/maxresdefault.jpg" class="card-img-top" alt="Green Book">
+            <div class="card-body">
+              <h5 class="card-title">Green Book</h5>
+              <p class="card-text text-muted">มิตรภาพต่างขั้วระหว่างนักเปียโนและคนขับรถ ระหว่างการเดินทางในอเมริกายุคแบ่งแยกสีผิว</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#movie3Modal">ดูรายละเอียด</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5" id="about">
+    <div class="container">
+      <h2 class="section-title text-center">เกี่ยวกับเรา</h2>
+      <div class="about-box p-4 p-md-5">
+        <p class="mb-0 fs-5">
+          เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำภาพยนตร์ที่น่าสนใจในรูปแบบทันสมัยและใช้งานง่าย ผู้ใช้งานสามารถดูรายชื่อภาพยนตร์
+          อ่านรายละเอียดเบื้องต้น และติดต่อทีมงานผ่านแบบฟอร์มได้อย่างสะดวก โดยแนวคิดของเว็บไซต์คือการรวมข้อมูลภาพยนตร์ไว้ในหน้าเดียว
+          พร้อมออกแบบด้วย Bootstrap ให้รองรับการใช้งานทั้งบนคอมพิวเตอร์และโทรศัพท์มือถือ
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5" id="contact">
+    <div class="container">
+      <h2 class="section-title text-center">ติดต่อเรา</h2>
+      <div class="contact-box p-4 p-md-5 mx-auto" style="max-width: 900px;">
+        <form>
+          <div class="mb-3">
+            <label for="fullname" class="form-label">ชื่อ-นามสกุล</label>
+            <input type="text" class="form-control" id="fullname" placeholder="กรอกชื่อ-นามสกุล">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">อีเมล</label>
+            <input type="email" class="form-control" id="email" placeholder="กรอกอีเมล">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">ข้อความ</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="กรอกข้อความที่ต้องการติดต่อ"></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">ส่งข้อมูล</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 mt-4">
+    <div class="container text-center">
+      <p class="mb-3 fs-5">© 2026 Movie By 68092306</p>
+      <div class="social-icons d-flex justify-content-center gap-3">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://line.me" target="_blank"><i class="fa-brands fa-line"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="movie1Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Jurassic World</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://spoilertown.com/wp-content/uploads/2025/07/jurassic-world-2015.webp" class="img-fluid rounded mb-3" alt="Jurassic World">
+          <p><strong>ผู้กำกับ:</strong> Colin Trevorrow</p>
+          <p><strong>นักแสดงนำ:</strong> Chris Pratt, Bryce Dallas Howard</p>
+          <p><strong>เนื้อเรื่องย่อ:</strong> Jurassic World คือสวนสนุกไดโนเสาร์ที่ถูกสร้างขึ้นใหม่บนเกาะอิสลา นูบลาร์ แต่เมื่อไดโนเสาร์สายพันธุ์ใหม่ที่ถูกดัดแปลงพันธุกรรมหลุดออกมา ทุกอย่างก็เข้าสู่ความโกลาหล ผู้คนต้องเอาชีวิตรอดจากอันตรายที่ไม่คาดคิด</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="movie2Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Iron Man 3</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/f8d9c4e3-406d-413d-aab9-427500dd3a37/compose?aspectRatio=1.78&format=webp&width=1200" class="img-fluid rounded mb-3" alt="Iron Man 3">
+          <p><strong>ผู้กำกับ:</strong> Shane Black</p>
+          <p><strong>นักแสดงนำ:</strong> Robert Downey Jr., Gwyneth Paltrow, Don Cheadle</p>
+          <p><strong>เนื้อเรื่องย่อ:</strong> หลังจากเหตุการณ์การต่อสู้ครั้งใหญ่ โทนี่ สตาร์ค ต้องเผชิญกับความวิตกกังวลและฝันร้าย เขาถูกท้าทายโดยวายร้ายลึกลับที่เรียกว่า “แมนดาริน” ซึ่งก่อการร้ายไปทั่วโลก เมื่อบ้านของเขาถูกทำลาย โทนี่ต้องพึ่งพาความสามารถของตัวเองโดยไม่มีชุดเกราะเต็มรูปแบบ เพื่อเอาชีวิตรอดและปกป้องคนที่เขารัก พร้อมพิสูจน์ว่า “ฮีโร่ที่แท้จริง” ไม่ได้อยู่ที่ชุดเกราะ แต่อยู่ที่ตัวเขาเอง</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="movie3Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Green Book</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://i.ytimg.com/vi/QkZxoko_HC0/maxresdefault.jpg" class="img-fluid rounded mb-3" alt="Green Book">
+          <p><strong>ผู้กำกับ:</strong> Peter Farrelly</p>
+          <p><strong>นักแสดงนำ:</strong> Viggo Mortensen, Mahershala Ali</p>
+          <p><strong>เนื้อเรื่องย่อ:</strong> Green Book เล่าเรื่องการเดินทางของดอน เชอร์ลีย์ นักเปียโนผิวดำชื่อดัง และโทนี ลิป คนขับรถชาวอิตาเลียน-อเมริกัน ที่ต้องร่วมเดินทางผ่านรัฐทางใต้ของสหรัฐฯ พร้อมเผชิญอคติทางเชื้อชาติและเรียนรู้มิตรภาพที่แท้จริง</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
